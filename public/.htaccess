@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+    DocumentRoot "C:/Users/Havi/Desktop/E-Commerce/sales/public"
+    ServerName yourdomain.com
+
+    <Directory "C:/Users/Havi/Desktop/E-Commerce/sales/public">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    # Alias for assets directory
+    Alias /assets "C:/Users/Havi/Desktop/E-Commerce/assets"
+    <Directory "C:/Users/Havi/Desktop/E-Commerce/assets">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
