@@ -29,19 +29,19 @@
 
                 <form action="{{ route('admin.login') }}" method="post">
                     @csrf
-                    
+
                     <div class="input-group mb-3">
-                        <input type="test" name="username" class="form-control" placeholder="username">
+                        <input type="text" name="username" class="form-control" placeholder="Username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
-
                         @error('username')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
+
                     <div class="input-group mb-3">
                         <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
@@ -54,14 +54,11 @@
                         @enderror
                     </div>
 
-                        <!-- /.col -->
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                        </div>
-                        <!-- /.col -->
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
                     </div>
                 </form>
-
+            </div>
             <!-- /.login-card-body -->
         </div>
     </div>
@@ -70,7 +67,7 @@
     <!-- jQuery -->
     <script src="{{ asset('assets/admin/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{ asset('assets/admin/}plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 </body>
 

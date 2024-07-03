@@ -12,11 +12,13 @@ class LoginController extends Controller
     public function show_login_view()
     {
 
+
         return view('admin.auth.login');
     }
 
     public function login(LoginRequest $request)
     {
+
         if(auth()->guard('admin')
         ->attempt([
         'username' => $request->username,
@@ -28,6 +30,7 @@ class LoginController extends Controller
     }
     public function logout()
     {
+        
         auth()->logout();
         return redirect()->route('admin.showlogin');
     }
