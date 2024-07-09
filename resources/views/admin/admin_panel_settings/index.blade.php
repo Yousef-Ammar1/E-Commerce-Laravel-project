@@ -22,7 +22,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                    <h3 class="card-title card_title_center">DataTable with minimal features & hover style</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -62,8 +62,7 @@
                                 <td class="width30">Logo</td>
                                 <td>
                                     <div class="image">
-                                        <img class="custom-image"
-                                            src="{{ asset('assets/admin/dist/img/user3-128x128.jpg') }}" alt="User Image">
+                                        <img class="custom_img" src="{{ asset('assets/admin/uploads'. '/' . $data['photo'])}}" alt="User Image">
                                     </div>
                                 </td>
                             </tr>
@@ -74,7 +73,7 @@
                     @php
                         $dt = new DateTime($data['updated_at']);
                         $date = $dt->format('d-m-Y H:i:s');
-                        $time = $dt->format('H:i');
+                        $time = $dt->format('h:i a');
                         $newDate = date('A', strtotime($time));
                         $newDateTimeType = ( $newDate == 'AM') ? 'AM' : 'PM';
                     @endphp
@@ -86,6 +85,10 @@
                 @else
                     No update
                 @endif
+
+                <a href="{{ route('admin.adminPanelSetting.edit') }}" class="btn btn-sm btn-success ">
+                    Edit
+                </a>
             </td>
         </tr>
                         </table>

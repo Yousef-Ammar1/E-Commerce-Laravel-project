@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('system_name');
             $table->string('photo', length: 225);
             $table->tinyInteger('active')->default(1);
-            $table->string('general_alert');
+            $table->string('general_alert')->nullable();
             $table->string('address');
             $table->string('phone');
             $table->unsignedBigInteger('added_by')->nullable();

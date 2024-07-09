@@ -14,6 +14,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin',
         ->name('admin.logout');
         Route::get('/adminPanelSetting/index', [Admin_panel_settingController::class, 'index'])
         ->name('admin.adminPanelSetting.index');
+        Route::get('/adminPanelSetting/edit', [Admin_panel_settingController::class, 'edit'])
+        ->name('admin.adminPanelSetting.edit');
+        Route::post('/adminPanelSetting/update', [Admin_panel_settingController::class, 'update'])
+        ->name('admin.adminPanelSetting.update');
 
 });
 
